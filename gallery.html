@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens do Projeto</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #d4af37;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            border-radius: 4px;
+            background-color: #222;
+        }
+        .info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ccc;
+            word-break: break-all;
+        }
+        .dimensions {
+            color: #d4af37;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeria de Imagens do Projeto</h1>
+    <div class="grid" id="gallery-grid">
+        <!-- Imagens serão inseridas aqui pelo script -->
+    </div>
+
+    <script>
+        // Lista de arquivos PNG encontrados
+        const images = [
+            { name: "file_000000001ca4720e894cd8a0dc7ea236.png", dims: "1024x1536" },
+            { name: "file_000000002c94720e82618d7811e82ec4.png", dims: "1055x1491" },
+            { name: "file_0000000042cc720ea7102be0b8f10149.png", dims: "1054x1492" },
+            { name: "file_000000004cdc720e919857d3f322b1dc.png", dims: "1054x1492" },
+            { name: "file_000000004cf0720ea689b20658d02915.png", dims: "1024x1536" },
+            { name: "file_000000004f6c720e90961b23db786538.png", dims: "1536x1024" },
+            { name: "file_000000005724720e8471ec11d17ee8c4.png", dims: "1254x1254" },
+            { name: "file_00000000856871f58a9fcaa62c52d2b0.png", dims: "1024x1536" },
+            { name: "file_000000008abc720e8099984c5b069ef1.png", dims: "1054x1492" },
+            { name: "file_000000009198720e870d014735905bfc.png", dims: "1024x1536" },
+            { name: "file_00000000958c720ebd527c368cd5c711.png", dims: "1055x1491" },
+            { name: "file_00000000967471f5b51433be85648ed9.png", dims: "1055x1491" },
+            { name: "file_00000000a1b8720e9bde2531a8cebfae.png", dims: "1055x1491" },
+            { name: "file_00000000af68720e82836302dfd579e9.png", dims: "1086x1448" },
+            { name: "file_00000000b660720e9fea868375358209.png", dims: "1024x1536" },
+            { name: "file_00000000c158720e91ea14e5f06697d3.png", dims: "1055x1491" },
+            { name: "file_00000000c8e8720ebea9fabf4573c59e.png", dims: "1024x1536" },
+            { name: "file_00000000cc8c720ebd4fa4cee6dc1eb8.png", dims: "1055x1491" },
+            { name: "file_00000000ead4720e8e009208aae49275.png", dims: "1054x1492" },
+            { name: "file_00000000eb3c720ea5377680f5d0fc73.png", dims: "1054x1492" },
+            { name: "file_00000000f37871f5a38ba7dc7024a661.png", dims: "1055x1491" }
+        ];
+
+        const grid = document.getElementById('gallery-grid');
+        images.forEach(img => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            const imageEl = document.createElement('img');
+            imageEl.src = img.name;
+            imageEl.alt = img.name;
+            
+            const info = document.createElement('div');
+            info.className = 'info';
+            info.innerHTML = `<strong>Nome:</strong> ${img.name}<br><span class="dimensions">Dimensões: ${img.dims}</span>`;
+            
+            card.appendChild(imageEl);
+            card.appendChild(info);
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>

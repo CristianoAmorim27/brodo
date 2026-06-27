@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BRODO Caldos Artesanais - O calor da Ilha em cada colherada. Faça seu pedido online e receba caldos deliciosos e artesanais em casa em Florianópolis/SC.">
+    <title>BRODO | Caldos Artesanais - Pedidos via WhatsApp</title>
+    
+    <!-- Google Fonts: Cinzel para títulos elegantes e Montserrat para legibilidade -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Banner Informativo -->
+    <div class="top-banner">
+        <span><i class="fa-solid fa-snowflake"></i> Caldos Ultracongelados - Prontos para aquecer e saborear!</span>
+        <span class="delivery-badge"><i class="fa-solid fa-truck"></i> Entregas em Florianópolis - SC</span>
+    </div>
+
+    <!-- Header Principal -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <!-- SVG Logo inspirado na Identidade Visual original -->
+                <svg class="brand-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="#0F2D1D" stroke-width="1"/>
+                    <!-- Desenho da tigela de sopa -->
+                    <path d="M 30 50 Q 50 50 70 50 C 70 65 65 72 50 72 C 35 72 30 65 30 50 Z" fill="none" stroke="#0F2D1D" stroke-width="3"/>
+                    <path d="M 28 48 L 72 48 Q 72 50 70 50 L 30 50 Q 28 50 28 48 Z" fill="#D4AF37"/>
+                    <!-- Alças da tigela -->
+                    <path d="M 28 54 A 6 6 0 0 1 23 59" fill="none" stroke="#0F2D1D" stroke-width="2"/>
+                    <path d="M 72 54 A 6 6 0 0 0 77 59" fill="none" stroke="#0F2D1D" stroke-width="2"/>
+                    <!-- Vapor da sopa -->
+                    <path d="M 42 40 Q 45 35 42 30 Q 39 25 42 20" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M 50 38 Q 53 33 50 28 Q 47 23 50 18" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M 58 40 Q 61 35 58 30 Q 55 25 58 20" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Folhinhas de tempero embaixo da tigela -->
+                    <path d="M 45 78 Q 50 75 55 78" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+                    <path d="M 43 81 Q 50 78 57 81" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+                </svg>
+                <div class="brand-text">
+                    <h1 class="brand-title">BRODO</h1>
+                    <span class="brand-subtitle">CALDOS ARTESANAIS</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="#cardapio" class="nav-link active">Cardápio</a>
+                <a href="#como-preparar" class="nav-link">Modo de Preparo</a>
+                <a href="#nosso-posicionamento" class="nav-link">Quem Somos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+            <div class="cart-trigger-container">
+                <button id="cart-toggle-btn" class="cart-btn" aria-label="Abrir carrinho">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-count" id="cart-badge-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">RECEITAS QUE AQUECEM E CONFORTAM</span>
+                <h2 class="hero-title">O calor da Ilha em cada colherada.</h2>
+                <p class="hero-desc">Caldos artesanais preparados lentamente com ingredientes rigorosamente selecionados. Feitos com carinho, prontos para congelar e práticos de aquecer.</p>
+                <div class="hero-actions">
+                    <a href="#cardapio" class="btn btn-primary btn-large">Ver Cardápio</a>
+                    <a href="#como-preparar" class="btn btn-secondary btn-large">Como Preparar</a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-badge">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span>Ingredientes Selecionados</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Feito com Carinho</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fa-solid fa-snowflake"></i>
+                        <span>Pronto para Congelar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <!-- Exibe o lindo folheto do menu do projeto -->
+                <div class="menu-flyer-card">
+                    <img src="file_00000000af68720e82836302dfd579e9.png" alt="Cardápio Oficial Brodo Caldos" class="menu-flyer-img">
+                    <div class="flyer-badge">Menu Oficial</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Destaques Rápidos -->
+    <section class="highlights-section">
+        <div class="container grid-3">
+            <div class="highlight-item">
+                <div class="highlight-icon green">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3>Sabor & Afeto</h3>
+                <p>Nossos caldos resgatam memórias afetivas em receitas tradicionais preparadas à mão.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon brown">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Praticidade Pura</h3>
+                <p>Embalagens de 500ml ideais para uma refeição saudável e rápida. Do freezer ao prato em minutos.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon terracotta">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Sem Conservantes</h3>
+                <p>Tecnologia de congelamento rápido que preserva os nutrientes, a textura e o sabor original.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardápio Section -->
+    <section id="cardapio" class="cardapio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">NOSSOS SABORES</span>
+                <h2 class="section-title">Escolha os seus Caldos</h2>
+                <div class="section-divider"></div>
+                <p class="section-desc">Caldos artesanais em porções individuais de 500ml. Selecione as opções abaixo para montar seu pedido.</p>
+            </div>
+
+            <!-- Lista de Produtos -->
+            <div class="products-grid">
+                
+                <!-- PRODUTO 1: BRODO VERDE -->
+                <article class="product-card flavor-verde" id="product-verde">
+                    <div class="product-badge">Mais Pedido</div>
+                    <div class="product-image-container">
+                        <!-- Imagem do caldo verde recortada a partir da folha do menu ou placeholder estilizado -->
+                        <div class="soup-bowl-circle verde">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Brodo Verde</h3>
+                            <span class="product-volume">500 ml</span>
+                        </div>
+                        <p class="product-tagline">Aipim cremoso com rúcula e bacon crocante.</p>
+                        
+                        <div class="accordion-info">
+                            <details>
+                                <summary><i class="fa-solid fa-circle-info"></i> Ver Ingredientes & Info</summary>
+                                <div class="details-content">
+                                    <p><strong>Ingredientes:</strong> Aipim, rúcula, bacon, cebola, alho, caldo de legumes, creme de leite, manteiga, sal, pimenta-do-reino e noz-moscada.</p>
+                                    <p class="allergen-warning"><strong>ALÉRGICOS:</strong> Contém leite e derivados. Pode conter glúten, soja e aipo.</p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="currency">R$</span>
+                                <span class="price-value" id="price-value-verde">26,00</span>
+                            </div>
+                            <div class="quantity-selector-container">
+                                <button class="qty-btn minus" onclick="changeQuantity('verde', -1)" aria-label="Diminuir quantidade">-</button>
+                                <span class="qty-display" id="qty-verde">0</span>
+                                <button class="qty-btn plus" onclick="changeQuantity('verde', 1)" aria-label="Aumentar quantidade">+</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-add-cart btn-block" onclick="addToCart('verde')" id="btn-add-verde">
+                            <i class="fa-solid fa-cart-plus"></i> Adicionar ao Pedido
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 2: BRODO CAIPIRA -->
+                <article class="product-card flavor-caipira" id="product-caipira">
+                    <div class="product-image-container">
+                        <div class="soup-bowl-circle caipira">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Brodo Caipira</h3>
+                            <span class="product-volume">500 ml</span>
+                        </div>
+                        <p class="product-tagline">Feijão preto cremoso com calabresa defumada (acompanha torresmo).</p>
+                        
+                        <div class="accordion-info">
+                            <details>
+                                <summary><i class="fa-solid fa-circle-info"></i> Ver Ingredientes & Info</summary>
+                                <div class="details-content">
+                                    <p><strong>Ingredientes:</strong> Feijão preto, calabresa defumada, bacon, cebola, alho, caldo de feijão, sal, louro e cheiro-verde. Acompanha pacote com torresmo crocante.</p>
+                                    <p class="allergen-warning"><strong>ALÉRGICOS:</strong> Pode conter glúten, soja e aipo.</p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="currency">R$</span>
+                                <span class="price-value" id="price-value-caipira">26,00</span>
+                            </div>
+                            <div class="quantity-selector-container">
+                                <button class="qty-btn minus" onclick="changeQuantity('caipira', -1)" aria-label="Diminuir quantidade">-</button>
+                                <span class="qty-display" id="qty-caipira">0</span>
+                                <button class="qty-btn plus" onclick="changeQuantity('caipira', 1)" aria-label="Aumentar quantidade">+</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-add-cart btn-block" onclick="addToCart('caipira')" id="btn-add-caipira">
+                            <i class="fa-solid fa-cart-plus"></i> Adicionar ao Pedido
+                        </button>
+                    </div>
+                </article>
+
+                <!-- PRODUTO 3: BRODO SERRANO -->
+                <article class="product-card flavor-serrano" id="product-serrano">
+                    <div class="product-image-container">
+                        <div class="soup-bowl-circle serrano">
+                            <i class="fa-solid fa-carrot"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-header">
+                            <h3 class="product-title">Brodo Serrano</h3>
+                            <span class="product-volume">500 ml</span>
+                        </div>
+                        <p class="product-tagline">Abóbora cabotiá com carne seca desfiada e requeijão cremoso.</p>
+                        
+                        <div class="accordion-info">
+                            <details>
+                                <summary><i class="fa-solid fa-circle-info"></i> Ver Ingredientes & Info</summary>
+                                <div class="details-content">
+                                    <p><strong>Ingredientes:</strong> Abóbora cabotiá, carne seca, cebola, alho, requeijão cremoso, manteiga, sal, pimenta-do-reino e noz-moscada.</p>
+                                    <p class="allergen-warning"><strong>ALÉRGICOS:</strong> Contém leite e derivados. Pode conter glúten, soja e aipo.</p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="currency">R$</span>
+                                <span class="price-value" id="price-value-serrano">26,00</span>
+                            </div>
+                            <div class="quantity-selector-container">
+                                <button class="qty-btn minus" onclick="changeQuantity('serrano', -1)" aria-label="Diminuir quantidade">-</button>
+                                <span class="qty-display" id="qty-serrano">0</span>
+                                <button class="qty-btn plus" onclick="changeQuantity('serrano', 1)" aria-label="Aumentar quantidade">+</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-add-cart btn-block" onclick="addToCart('serrano')" id="btn-add-serrano">
+                            <i class="fa-solid fa-cart-plus"></i> Adicionar ao Pedido
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Acompanhamentos Extra -->
+            <div class="extras-container">
+                <h3 class="extras-title"><i class="fa-solid fa-circle-plus"></i> Adicionar Acompanhamentos</h3>
+                <div class="extras-grid">
+                    <div class="extra-item">
+                        <div class="extra-info">
+                            <span class="extra-name">Bacon Crocante Extra (50g)</span>
+                            <span class="extra-price">+ R$ 4,00</span>
+                        </div>
+                        <div class="quantity-selector-container">
+                            <button class="qty-btn minus" onclick="changeExtraQuantity('bacon', -1)">-</button>
+                            <span class="qty-display" id="qty-extra-bacon">0</span>
+                            <button class="qty-btn plus" onclick="changeExtraQuantity('bacon', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="extra-item">
+                        <div class="extra-info">
+                            <span class="extra-name">Torresmo Adicional (50g)</span>
+                            <span class="extra-price">+ R$ 4,00</span>
+                        </div>
+                        <div class="quantity-selector-container">
+                            <button class="qty-btn minus" onclick="changeExtraQuantity('torresmo', -1)">-</button>
+                            <span class="qty-display" id="qty-extra-torresmo">0</span>
+                            <button class="qty-btn plus" onclick="changeExtraQuantity('torresmo', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="extra-item">
+                        <div class="extra-info">
+                            <span class="extra-name">Porção de Croutons Crocantes</span>
+                            <span class="extra-price">+ R$ 3,00</span>
+                        </div>
+                        <div class="quantity-selector-container">
+                            <button class="qty-btn minus" onclick="changeExtraQuantity('croutons', -1)">-</button>
+                            <span class="qty-display" id="qty-extra-croutons">0</span>
+                            <button class="qty-btn plus" onclick="changeExtraQuantity('croutons', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Rótulo Completo -->
+    <section class="banner-labels-section">
+        <div class="container text-center">
+            <h2 class="labels-section-title">Nossos Rótulos e Garantia de Qualidade</h2>
+            <p>Confira as informações completas de fabricação, conservação e ingredientes direto em nossas embalagens:</p>
+            <div class="labels-img-container">
+                <img src="file_000000005724720e8471ec11d17ee8c4.png" alt="Informações dos Rótulos Brodo Caldos" class="labels-large-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modo de Preparo Section -->
+    <section id="como-preparar" class="preparo-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PRATICIDADE</span>
+                <h2 class="section-title">Como Preparar seu Brodo</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="grid-2 preparo-grid">
+                <div class="preparo-card">
+                    <div class="preparo-header">
+                        <i class="fa-solid fa-microchip-play preparo-icon"></i>
+                        <h3>No Micro-ondas</h3>
+                    </div>
+                    <p class="preparo-desc">Retire da embalagem congelada, coloque em um recipiente adequado para micro-ondas e aqueça por <strong>4 a 6 minutos</strong>, mexendo na metade do tempo para garantir um aquecimento uniforme.</p>
+                </div>
+                <div class="preparo-card">
+                    <div class="preparo-header">
+                        <i class="fa-solid fa-fire-burner preparo-icon"></i>
+                        <h3>Na Panela</h3>
+                    </div>
+                    <p class="preparo-desc">Coloque o caldo diretamente em uma panela pequena e aqueça em fogo baixo, mexendo ocasionalmente até atingir a temperatura desejada e a cremosidade ideal.</p>
+                </div>
+            </div>
+
+            <div class="conservacao-box">
+                <h4><i class="fa-solid fa-snowflake"></i> Dicas de Conservação</h4>
+                <ul>
+                    <li>Mantenha congelado a <strong>-18°C</strong> ou menos para validade total.</li>
+                    <li>Após descongelado, conservar refrigerado entre <strong>0°C e 5°C</strong> e consumir em até <strong>48 horas</strong>.</li>
+                    <li><strong>Não recongelar</strong> após o descongelamento.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosso Posicionamento Section (Quem Somos) -->
+    <section id="nosso-posicionamento" class="posicionamento-section">
+        <div class="container grid-2 align-center">
+            <div class="posicionamento-text">
+                <span class="section-subtitle">MAIS QUE SABOR</span>
+                <h2 class="section-title">Conforto que se sente.</h2>
+                <div class="section-divider left"></div>
+                <blockquote>
+                    "A BRODO não é apenas uma marca. É um abraço quente em forma de comida."
+                </blockquote>
+                <p>Não vendemos apenas caldos. Entregamos uma experiência completa de conforto, praticidade e qualidade. Acreditamos que a comida de verdade deve ser acessível e prática para o dia a dia, sem nunca abrir mão do sabor artesanal e da dedicação.</p>
+                
+                <div class="posicionamento-pilares">
+                    <div class="pilar">
+                        <i class="fa-solid fa-heart"></i>
+                        <strong>Conforto:</strong> Receitas que aquecem o corpo e a alma, trazendo boas lembranças.
+                    </div>
+                    <div class="pilar">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <strong>Praticidade:</strong> Congelados prontos para servir em minutos, facilitando sua rotina.
+                    </div>
+                    <div class="pilar">
+                        <i class="fa-solid fa-medal"></i>
+                        <strong>Qualidade:</strong> Ingredientes selecionados e padrões elevados em cada etapa.
+                    </div>
+                </div>
+            </div>
+            <div class="posicionamento-image-container">
+                <img src="file_000000002c94720e82618d7811e82ec4.png" alt="Nosso Posicionamento - Brodo Caldos" class="brand-book-page-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contato -->
+    <footer id="contato" class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-container">
+                    <svg class="brand-logo-svg small" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="46" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <path d="M 30 50 Q 50 50 70 50 C 70 65 65 72 50 72 C 35 72 30 65 30 50 Z" fill="none" stroke="#ffffff" stroke-width="3"/>
+                        <path d="M 50 38 Q 53 33 50 28 Q 47 23 50 18" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                    <div class="brand-text">
+                        <h4 class="brand-title text-white">BRODO</h4>
+                        <span class="brand-subtitle text-gold">CALDOS ARTESANAIS</span>
+                    </div>
+                </div>
+                <p class="footer-about">Simples de aquecer, impossível resistir. Do nosso tacho diretamente para a sua mesa.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/brodocaldos" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> @brodocaldos</a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Nossos Sabores</h4>
+                <ul>
+                    <li><a href="#cardapio">Brodo Verde</a></li>
+                    <li><a href="#cardapio">Brodo Caipira</a></li>
+                    <li><a href="#cardapio">Brodo Serrano</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contato & Endereço</h4>
+                <p><i class="fa-solid fa-phone text-gold"></i> (48) 99999-9999</p>
+                <p><i class="fa-solid fa-envelope text-gold"></i> contato@brodocaldos.com.br</p>
+                <p><i class="fa-solid fa-location-dot text-gold"></i> Florianópolis - SC</p>
+                <p class="footer-taxa-info"><i class="fa-solid fa-truck-ramp-box text-gold"></i> Entregas em toda a Ilha e Região Continental.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BRODO Caldos Artesanais. Todos os direitos reservados. Florianópolis - SC.</p>
+        </div>
+    </footer>
+
+    <!-- CARRINHO LATERAL (DRAWER) -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-drawer-overlay" onclick="toggleCartDrawer()"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-drawer-header">
+                <h3>Seu Pedido</h3>
+                <button class="close-cart-btn" onclick="toggleCartDrawer()" aria-label="Fechar carrinho">&times;</button>
+            </div>
+            
+            <div class="cart-drawer-body">
+                <!-- Lista de Itens no Carrinho -->
+                <div id="cart-items-list" class="cart-items-list">
+                    <!-- Gerado dinamicamente via JS -->
+                    <div class="empty-cart-message">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <p>Seu carrinho está vazio.</p>
+                        <a href="#cardapio" class="btn btn-primary" onclick="toggleCartDrawer()">Escolher Caldos</a>
+                    </div>
+                </div>
+
+                <!-- Resumo de Valores -->
+                <div class="cart-summary" id="cart-summary-section" style="display: none;">
+                    <div class="summary-row">
+                        <span>Subtotal dos Caldos</span>
+                        <span id="summary-subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row" id="summary-extras-row" style="display: none;">
+                        <span>Acompanhamentos</span>
+                        <span id="summary-extras">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row delivery-row">
+                        <span>Taxa de Entrega</span>
+                        <span id="summary-delivery-tax" class="text-gold">A combinar</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total Geral</span>
+                        <span id="summary-total" class="text-white">R$ 0,00</span>
+                    </div>
+                    
+                    <!-- Desconto no Pix -->
+                    <div class="pix-discount-notice">
+                        <i class="fa-solid fa-percent text-gold"></i> Pague com Pix e ganhe 5% de desconto! (Valor final: <strong id="pix-total">R$ 0,00</strong>)
+                    </div>
+                </div>
+
+                <!-- Formulário de Checkout -->
+                <form id="checkout-form" class="checkout-form" style="display: none;" onsubmit="submitOrder(event)">
+                    <h4>Informações do Pedido</h4>
+                    
+                    <div class="form-group">
+                        <label for="client-name">Seu Nome *</label>
+                        <input type="text" id="client-name" class="form-control" required placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="client-phone">WhatsApp de Contato *</label>
+                        <input type="tel" id="client-phone" class="form-control" required placeholder="(48) 99999-9999">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tipo de Retirada/Entrega *</label>
+                        <div class="radio-group-toggle">
+                            <input type="radio" id="delivery-type-delivery" name="delivery-type" value="delivery" checked onchange="toggleDeliveryFields(true)">
+                            <label for="delivery-type-delivery"><i class="fa-solid fa-truck"></i> Delivery</label>
+                            
+                            <input type="radio" id="delivery-type-pickup" name="delivery-type" value="pickup" onchange="toggleDeliveryFields(false)">
+                            <label for="delivery-type-pickup"><i class="fa-solid fa-store"></i> Retirada</label>
+                        </div>
+                    </div>
+
+                    <!-- Campos de Endereço (Ocultados se for Retirada) -->
+                    <div id="address-fields" class="address-fields">
+                        <div class="form-group">
+                            <label for="address-street">Rua e Número *</label>
+                            <input type="text" id="address-street" class="form-control" placeholder="Rua das Palmeiras, 123">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="address-bairro">Bairro *</label>
+                                <input type="text" id="address-bairro" class="form-control" placeholder="Centro">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="address-complement">Complemento</label>
+                                <input type="text" id="address-complement" class="form-control" placeholder="Apto 202">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address-ref">Ponto de Referência</label>
+                            <input type="text" id="address-ref" class="form-control" placeholder="Próximo ao supermercado X">
+                        </div>
+                    </div>
+
+                    <!-- Campo de Retirada Informativo -->
+                    <div id="pickup-info" class="pickup-info" style="display: none;">
+                        <p><i class="fa-solid fa-location-dot text-gold"></i> <strong>Endereço para Retirada:</strong></p>
+                        <p class="pickup-address">Centro, Florianópolis - SC.<br><span class="pickup-note">O endereço completo e horário para retirada serão informados após a confirmação do pedido no WhatsApp.</span></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-method">Forma de Pagamento *</label>
+                        <select id="payment-method" class="form-control" required onchange="handlePaymentChange()">
+                            <option value="pix">Pix (5% Desconto)</option>
+                            <option value="credito">Cartão de Crédito</option>
+                            <option value="debito">Cartão de Débito</option>
+                            <option value="dinheiro">Dinheiro</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo de Troco se for Dinheiro -->
+                    <div id="troco-field" class="form-group" style="display: none;">
+                        <label for="troco-value">Precisa de troco para quanto?</label>
+                        <input type="text" id="troco-value" class="form-control" placeholder="Ex: R$ 100,00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="order-notes">Observações do Pedido</label>
+                        <textarea id="order-notes" class="form-control" rows="2" placeholder="Ex: Tirar coentro, embalar separado, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-whatsapp-submit btn-block">
+                        <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido pelo WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="app.js"></script>
+</body>
+</html>
