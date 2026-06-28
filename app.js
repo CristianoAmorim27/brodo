@@ -1,6 +1,6 @@
 // CONFIGURAÇÕES DO ESTABELECIMENTO
 const CONFIG = {
-    whatsappNumber: "5548999999999", // Número do WhatsApp (DDI + DDD + Número, apenas dígitos)
+    whatsappNumber: "5548991836799", // Número do WhatsApp (DDI + DDD + Número, apenas dígitos)
     prices: {
         verde: 26.00,
         caipira: 26.00,
